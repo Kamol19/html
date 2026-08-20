@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aetheron Labs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #020817;
+            color: #ecfeff;
+        }
+        .container {
+            width: 75%;
+            margin: auto;
+        }
+        header {
+            background: #0f172a;
+            padding: 20px 0;
+            border-bottom: 1px solid #1e293b;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #7dd3fc;
+        }
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+        .page {
+            padding: 60px 0;
+        }
+        .layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+        }
+        h1 {
+            color: #7dd3fc;
+            font-size: 2.5rem;
+        }
+        p, li {
+            color: #dbeafe;
+            line-height: 1.8;
+        }
+        .card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        input, textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: white;
+        }
+        button {
+            background: #38bdf8;
+            color: #082f49;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid #1e293b;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo">AETHERON LABS</div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page">
+        <div class="layout">
+            <section>
+                <h1>Connect With Our Innovation Team</h1>
+                <p>
+                    We partner with organizations shaping the future of AI, mobility, energy, and secure digital systems.
+                    Share your vision and our specialists will respond with a tailored solution.
+                </p>
+                <ul>
+                    <li>Global strategy consultations</li>
+                    <li>AI and systems integration support</li>
+                    <li>Research collaboration and product development</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="text" name="company" placeholder="Company Name">
+
+        <textarea name="message" rows="5" placeholder="Project details" required></textarea>
+
+        <button type="submit">Send Inquiry</button>
+    </form>
+</section>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Aetheron Labs. Let’s build what’s next.
+    </footer>
+</body>
+</html>
